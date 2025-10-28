@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 40px 20px;
 }
@@ -131,16 +131,19 @@ h3 {
     display: flex;
     gap: 40px;
     align-items: flex-start;
+    margin-bottom: 40px;
 }
 
 .project-content {
     flex: 1;
     min-width: 0;
+    max-width: 50%;
 }
 
 .project-materials {
     flex: 1;
     margin-top: 0;
+    max-width: 50%;
 }
 
 .project-image, .project-video {
