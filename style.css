@@ -127,8 +127,31 @@ h3 {
     border-radius: 4px;
 }
 
+.project.horizontal {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.project-content {
+    flex: 1;
+    min-width: 0;
+}
+
 .project-materials {
-    margin-top: 20px;
+    flex: 1;
+    margin-top: 0;
+}
+
+.project-image, .project-video {
+    margin-bottom: 20px;
+}
+
+.project-video video {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .image-caption {
@@ -166,6 +189,17 @@ strong {
     font-weight: 600;
 }
 
+@media (max-width: 800px) {
+    .project.horizontal {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .project-materials {
+        margin-top: 20px;
+    }
+}
+
 @media (max-width: 600px) {
     .container {
         padding: 20px 15px;
@@ -187,5 +221,9 @@ strong {
     .featured {
         padding: 20px;
         margin: 20px -15px;
+    }
+    
+    .project-video video {
+        max-width: 250px;
     }
 }
