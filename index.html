@@ -3,76 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishan Ahluwalia - Robotics & AI Research</title>
+    <title>Ishan Ahluwalia</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Ishan Ahluwalia</h1>
-        <p>Robotics Research & Artificial Intelligence</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#about" class="nav-title">Ishan Ahluwalia</a>
+            <ul class="nav-menu">
+                <li><a href="#about">about</a></li>
+                <li><a href="#publications">publications</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#news">news</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a researcher passionate about robotics and artificial intelligence, working on cutting-edge projects that bridge the gap between theoretical research and practical applications.</p>
-        </section>
+    <div class="container">
+        <section id="about" class="about-section">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="https://via.placeholder.com/200x250/cccccc/666666?text=Your+Photo" alt="Ishan Ahluwalia" />
+                </div>
+                <div class="profile-content">
+                    <h1>Ishan Ahluwalia</h1>
+                    <p class="position">Robotics Researcher & AI Engineer</p>
+                    <p class="affiliation">University/Institution Name</p>
+                    
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> your.email@institution.edu</p>
+                        <p><strong>Office:</strong> Building Name, Room Number</p>
+                    </div>
 
-        <section id="research">
-            <h2>Research</h2>
-            <div class="research-item">
-                <h3>Research Area 1</h3>
-                <p>Description of your first research area or publication.</p>
-            </div>
-            <div class="research-item">
-                <h3>Research Area 2</h3>
-                <p>Description of your second research area or publication.</p>
-            </div>
-            <div class="research-item">
-                <h3>Research Area 3</h3>
-                <p>Description of your third research area or publication.</p>
-            </div>
-        </section>
+                    <div class="social-links">
+                        <a href="#">Google Scholar</a> /
+                        <a href="#">GitHub</a> /
+                        <a href="#">LinkedIn</a> /
+                        <a href="cv.pdf">CV</a>
+                    </div>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Robotics Project 1</h3>
-                <p>Description of your robotics project, including technologies used and outcomes.</p>
-            </div>
-            <div class="project">
-                <h3>AI Project 1</h3>
-                <p>Description of your AI project, including methodologies and results.</p>
-            </div>
-            <div class="project">
-                <h3>Robotics Project 2</h3>
-                <p>Description of another robotics project.</p>
-            </div>
-            <div class="project">
-                <h3>AI Project 2</h3>
-                <p>Description of another AI project.</p>
+                    <div class="bio">
+                        <p>I am a robotics researcher and AI engineer passionate about developing intelligent systems that can interact with and understand the physical world. My research focuses on the intersection of computer vision, machine learning, and robotics, with particular emphasis on autonomous navigation, manipulation, and human-robot interaction.</p>
+                        
+                        <p>Currently, I am working on [specific research area] at [Institution]. My work aims to bridge the gap between theoretical advances in AI and practical robotic applications that can benefit society.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
-            <p>GitHub: <a href="#">Your GitHub Profile</a></p>
+        <section id="news" class="news-section">
+            <h2>news</h2>
+            <div class="news-items">
+                <div class="news-item">
+                    <span class="news-date">Oct 2024</span>
+                    <span class="news-content">Paper accepted to [Conference Name 2025]!</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Sep 2024</span>
+                    <span class="news-content">Presented research at [Conference/Workshop Name].</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Aug 2024</span>
+                    <span class="news-content">Started new research collaboration with [Institution/Company].</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Jul 2024</span>
+                    <span class="news-content">Our work on [research topic] was featured in [Publication/Media].</span>
+                </div>
+            </div>
         </section>
-    </main>
+
+        <section id="publications" class="publications-section">
+            <h2>publications</h2>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <div class="pub-image">
+                        <img src="https://via.placeholder.com/150x100/e6e6e6/999999?text=Fig" alt="Publication figure" />
+                    </div>
+                    <div class="pub-content">
+                        <h3>Title of Your Recent Publication</h3>
+                        <p class="pub-authors"><strong>Ishan Ahluwalia</strong>, Collaborator Name, Another Author</p>
+                        <p class="pub-venue">Conference/Journal Name 2024</p>
+                        <p class="pub-description">Brief description of the publication and its key contributions to robotics and AI research.</p>
+                        <div class="pub-links">
+                            <a href="#">paper</a> / <a href="#">code</a> / <a href="#">project page</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="pub-image">
+                        <img src="https://via.placeholder.com/150x100/e6e6e6/999999?text=Fig" alt="Publication figure" />
+                    </div>
+                    <div class="pub-content">
+                        <h3>Another Research Paper Title</h3>
+                        <p class="pub-authors">Coauthor Name, <strong>Ishan Ahluwalia</strong>, Senior Author</p>
+                        <p class="pub-venue">Journal Name 2024</p>
+                        <p class="pub-description">Description of this publication's contribution to the field.</p>
+                        <div class="pub-links">
+                            <a href="#">paper</a> / <a href="#">code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="pub-image">
+                        <img src="https://via.placeholder.com/150x100/e6e6e6/999999?text=Fig" alt="Publication figure" />
+                    </div>
+                    <div class="pub-content">
+                        <h3>Third Publication Title</h3>
+                        <p class="pub-authors"><strong>Ishan Ahluwalia</strong>, Research Team</p>
+                        <p class="pub-venue">Workshop at Major Conference 2023</p>
+                        <p class="pub-description">Brief summary of the work and its impact.</p>
+                        <div class="pub-links">
+                            <a href="#">paper</a> / <a href="#">poster</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2>projects</h2>
+            <div class="projects-list">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/200x150/f0f0f0/888888?text=Project+Demo" alt="Project demo" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Autonomous Navigation System</h3>
+                        <p>Developed a robust navigation system for mobile robots using deep reinforcement learning and computer vision. The system can navigate complex indoor environments while avoiding obstacles and reaching target destinations.</p>
+                        <div class="project-links">
+                            <a href="#">GitHub</a> / <a href="#">Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/200x150/f0f0f0/888888?text=AI+System" alt="AI system" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Robotic Manipulation Framework</h3>
+                        <p>Created a learning-based framework for robotic manipulation tasks, enabling robots to learn complex grasping and manipulation skills through imitation learning and reinforcement learning techniques.</p>
+                        <div class="project-links">
+                            <a href="#">GitHub</a> / <a href="#">Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/200x150/f0f0f0/888888?text=Research+Tool" alt="Research tool" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Multi-Robot Coordination</h3>
+                        <p>Implemented algorithms for coordinating multiple robots in collaborative tasks, focusing on distributed decision-making and communication protocols for swarm robotics applications.</p>
+                        <div class="project-links">
+                            <a href="#">GitHub</a> / <a href="#">Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Ishan Ahluwalia. All rights reserved.</p>
+        <div class="footer-content">
+            <p>© 2024 Ishan Ahluwalia</p>
+            <p>Last updated: October 2024</p>
+        </div>
     </footer>
 </body>
 </html>
