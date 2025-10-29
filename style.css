@@ -112,6 +112,63 @@ h3 {
     color: #555;
 }
 
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ddd;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #ddd;
+}
+
+.timeline-date {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.timeline-content .position {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.timeline-content p:not(.position) {
+    color: #555;
+    line-height: 1.5;
+}
+
 .research-video {
     width: 100%;
     max-width: 300px;
