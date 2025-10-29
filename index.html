@@ -78,9 +78,31 @@
                 </div>
             </div>
 
-            <div class="project">
-                <h3>RoboSuite Door Opening</h3>
-                <p>Built DDPG actor-critic reinforcement learning system for robotic door manipulation. Achieved 98% success rate with mean episodic return improving from 90 to 230 over 7k training steps.</p>
+            <div class="project featured horizontal">
+                <div class="project-content">
+                    <h3>RoboSuite Door Opening</h3>
+                    <p class="position">Reinforcement Learning Project | May 2025 – Present</p>
+                    <p>Built DDPG actor-critic reinforcement learning system for robotic door manipulation using PyTorch and MuJoCo simulation environment. Implemented tanh actor network (256→128 layers) and Q-critic with experience replay buffer, Gaussian noise exploration, and soft target updates (τ=0.005).</p>
+                    <p><strong>Technical Details:</strong> Used Adam/AdamW optimizers with learning rate 1e-3 and custom reward shaping to guide the Panda robot arm through complex door opening sequences. System learns to handle door handle grasping, turning, and pulling motions.</p>
+                    <p><strong>Results:</strong> Achieved 98% success rate with mean episodic return improving from 90 at initialization to 230 by 7k training steps under fixed seeds and identical evaluation protocol.</p>
+                </div>
+                
+                <div class="project-materials">
+                    <div class="media-container">
+                        <div class="project-video">
+                            <video controls width="300">
+                                <source src="robosuite-door.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="image-caption">DDPG Agent Learning Door Opening Task</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/IshanAhluwalia/RLforRoboticDoor" target="_blank">GitHub Code</a>
+                        <a href="robosuite-door.mp4">Download Demo</a>
+                    </div>
+                </div>
             </div>
 
             <div class="project">
