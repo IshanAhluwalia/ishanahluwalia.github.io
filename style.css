@@ -101,30 +101,15 @@ h3 {
     border-bottom: none;
 }
 
-.research-text {
-    margin-bottom: 25px;
+.research-bullets {
+    margin: 15px 0 20px 20px;
+    padding: 0;
 }
 
-.research-media-horizontal {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-.media-item {
-    text-align: center;
-    flex: 1;
-}
-
-.research-image {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.research-bullets li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: #555;
 }
 
 .research-video {
@@ -339,13 +324,4 @@ strong {
         max-width: 250px;
     }
     
-    .research-media-horizontal {
-        flex-direction: column;
-        gap: 25px;
-        align-items: center;
-    }
-    
-    .research-image, .research-video {
-        max-width: 250px;
-    }
 }
