@@ -101,6 +101,38 @@ h3 {
     border-bottom: none;
 }
 
+.research-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.research-text {
+    flex: 2;
+}
+
+.research-media {
+    flex: 1;
+    text-align: center;
+}
+
+.research-gif {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.media-caption {
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+}
+
 .featured {
     background-color: #fafafa;
     padding: 25px;
@@ -277,5 +309,14 @@ strong {
     
     .project-video video {
         max-width: 250px;
+    }
+    
+    .research-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .research-gif {
+        max-width: 150px;
     }
 }
