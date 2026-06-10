@@ -4,288 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishan Ahluwalia</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="wrapper">
 
     <header>
-        <div class="header-text">
-            <h1>Ishan Ahluwalia</h1>
-            <p class="tagline">AI &amp; Applied Mathematics &middot; University of Pennsylvania</p>
-            <p class="bio">
-                I build intelligent systems at the intersection of robotics and artificial intelligence.
-                My work spans optical tactile sensing for underwater soft robots, reinforcement learning
-                for aquatic locomotion, and brain-computer interfaces for assistive exoskeletons.
-                I am a researcher at the <a href="https://grasp.upenn.edu/">GRASP Lab</a> at Penn,
-                advised by <a href="https://sung.seas.upenn.edu/">Prof. Cynthia Sung</a>.
-            </p>
-            <p class="contact-links">
-                <a href="mailto:ishanah@seas.upenn.edu">Email</a> &nbsp;/&nbsp;
-                <a href="https://linkedin.com/in/ishan-ahluwalia">LinkedIn</a> &nbsp;/&nbsp;
-                <a href="https://github.com/IshanAhluwalia">GitHub</a>
-            </p>
-        </div>
+        <h1>Ishan Ahluwalia</h1>
+        <p class="tagline">AI &amp; Applied Mathematics &middot; University of Pennsylvania</p>
+        <p class="bio">
+            I build intelligent systems at the intersection of robotics and artificial intelligence.
+            My work spans optical tactile sensing for underwater soft robots, reinforcement learning
+            for aquatic locomotion, and brain-computer interfaces for assistive exoskeletons.
+            I am a researcher at the <a href="https://grasp.upenn.edu/">GRASP Lab</a> at Penn,
+            advised by <a href="https://sung.seas.upenn.edu/">Prof. Cynthia Sung</a>.
+        </p>
+        <p class="contact-links">
+            <a href="mailto:ishanah@seas.upenn.edu">Email</a> &nbsp;/&nbsp;
+            <a href="https://linkedin.com/in/ishan-ahluwalia">LinkedIn</a> &nbsp;/&nbsp;
+            <a href="https://github.com/IshanAhluwalia">GitHub</a>
+        </p>
     </header>
 
-    <section id="research">
+    <section>
         <h2>Research &amp; Projects</h2>
 
-        <!-- ── TACTILE SENSING ─────────────────────────────── -->
+        <!-- ── OPTICAL TACTILE SENSING ─────────────────────── -->
         <div class="proj">
-            <div class="proj-text">
-                <h3>
-                    <a href="tactile_sensing.pdf">
-                        Optical Tactile Sensing for Underwater Robotics
-                    </a>
-                </h3>
-                <p class="proj-meta">
-                    Researcher &middot; <a href="https://grasp.upenn.edu/">GRASP Lab</a>, University of Pennsylvania<br>
-                    with Annie Yang &amp; <a href="https://sung.seas.upenn.edu/">Prof. Cynthia Sung</a>
-                    &middot; 2025
-                </p>
-                <p>
-                    Teaching a soft underwater robot to feel using only a camera. We print a dense
-                    fractal maze pattern on a transparent elastomer skin (225&thinsp;&times;&thinsp;30&thinsp;mm),
-                    mount a fisheye camera inside, and train a spatiotemporal encoder-decoder to infer
-                    contact location, indentation depth, normal force, and surface wave propagation
-                    at 30&thinsp;fps — no force sensors at inference.
-                </p>
+            <div class="proj-body">
+                <div class="proj-header">
+                    <h3>Optical Tactile Sensing for Underwater Robotics</h3>
+                    <div class="proj-tags">
+                        <a href="tactile_sensing.pdf" class="tag">paper</a>
+                        <a href="https://github.com/IshanAhluwalia/Optical-Tactile-Sensing-Research" class="tag">github</a>
+                    </div>
+                </div>
+                <p class="proj-meta">Researcher &middot; GRASP Lab, University of Pennsylvania &middot; with Annie Yang &amp; Prof. Cynthia Sung &middot; 2025</p>
+                <p>Teaching a soft underwater robot to feel using only a camera. We print a dense fractal maze pattern on a transparent elastomer skin (225&thinsp;&times;&thinsp;30&thinsp;mm), mount a fisheye camera inside, and train a spatiotemporal encoder-decoder to infer contact location, indentation depth, normal force, and surface wave propagation at 30&thinsp;fps &mdash; no force sensors at inference.</p>
                 <ul>
-                    <li>Custom data rig (repurposed MakerBot) collected &sim;360,000 labeled frames across 1,076 grid locations on a 2&thinsp;mm&thinsp;&times;&thinsp;2&thinsp;mm grid</li>
-                    <li>Analytically derived labels via spatially-varying Hertzian contact mechanics + elastic surface tension; per-strip (E, &gamma;) calibration from clamped boundary effects</li>
-                    <li>ResNet18 backbone + dense optical flow + ConvLSTM over 16-frame window; separate masked heads for static vs. dynamic (wave) estimation</li>
-                    <li>Baseline MAE: 0.52&thinsp;mm contact location, 0.38&thinsp;mm depth, 55&thinsp;mN force — generalizes to unseen contact positions</li>
+                    <li>Custom data rig collected ~360,000 labeled frames across 1,076 grid locations on a 2&thinsp;mm&thinsp;&times;&thinsp;2&thinsp;mm grid</li>
+                    <li>Analytically derived labels via spatially-varying Hertzian contact mechanics + elastic surface tension; per-strip (E,&thinsp;&gamma;) calibration</li>
+                    <li>ResNet18 backbone + dense optical flow + ConvLSTM over 16-frame window; masked heads for static vs. wave estimation</li>
+                    <li>Baseline MAE: 0.52&thinsp;mm contact location &middot; 0.38&thinsp;mm depth &middot; 55&thinsp;mN force &mdash; generalizes to unseen contact positions</li>
                 </ul>
-                <p class="proj-links">
-                    <a href="tactile_sensing.pdf">paper</a> &nbsp;/&nbsp;
-                    <a href="https://github.com/IshanAhluwalia/Optical-Tactile-Sensing-Research">github</a>
-                </p>
-            </div>
-            <div class="proj-media">
-                <img src="underwater-robot.gif" alt="Underwater soft robot platform">
-                <p class="caption">Underwater soft robot with elastomer tactile skin</p>
             </div>
         </div>
 
         <!-- ── SLAP ROBOT ──────────────────────────────────── -->
-        <div class="proj">
-            <div class="proj-text">
-                <h3>Reinforcement Learning Control for Aquatic Soft Robots</h3>
-                <p class="proj-meta">
-                    Researcher &middot; <a href="https://grasp.upenn.edu/">GRASP Lab</a> / Sung Lab, University of Pennsylvania
-                    &middot; Aug 2025 &ndash; Present
-                </p>
-                <p>
-                    Developing RL control policies for the SLAP robot — a biologically-inspired
-                    soft limbless aquatic propulsor. Using MDP reward shaping for forward locomotion
-                    and turning behaviors, alongside DenseTact Mini&thinsp;2 optical tactile sensor
-                    integration for environmental feedback and CNN-based underwater spatial localization.
-                </p>
+        <div class="proj has-thumb">
+            <img class="proj-thumb" src="intro_soft4.gif" alt="SLAP soft aquatic robot locomotion">
+            <div class="proj-body">
+                <div class="proj-header">
+                    <h3>Reinforcement Learning Control for Aquatic Soft Robots</h3>
+                    <div class="proj-tags">
+                        <a href="slap_robot_demo.mp4" class="tag">video</a>
+                    </div>
+                </div>
+                <p class="proj-meta">Researcher &middot; GRASP Lab / Sung Lab, University of Pennsylvania &middot; Aug 2025 &ndash; Present</p>
+                <p>Developing RL control policies for the SLAP robot &mdash; a biologically-inspired soft limbless aquatic propulsor. MDP reward shaping for forward locomotion and turning, alongside DenseTact Mini&thinsp;2 optical tactile sensor integration for environmental feedback and CNN-based underwater localization.</p>
                 <ul>
                     <li>Designed MDP reward states for locomotion; tested on 2D RL simulation environment</li>
                     <li>Installing DenseTact Mini&thinsp;2 sensors on robot body for closed-loop tactile feedback</li>
                     <li>CNN pipeline for underwater location mapping from tactile sensor streams</li>
                 </ul>
-                <p class="proj-links">
-                    <a href="slap_robot_demo.mp4">video</a>
-                </p>
-            </div>
-            <div class="proj-media">
-                <img src="intro_soft4.gif" alt="Soft aquatic robot locomotion">
-                <p class="caption">SLAP soft-body aquatic locomotion</p>
-                <video controls>
-                    <source src="slap_robot_demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="caption">2D RL algorithm demonstration</p>
             </div>
         </div>
 
         <!-- ── NEUROMOTUS ──────────────────────────────────── -->
-        <div class="proj">
-            <div class="proj-text">
-                <h3>
-                    <a href="neuromotus-paper.pdf">
-                        NeuroMotus: Brain-Computer Interface for Cerebral Palsy
-                    </a>
-                </h3>
-                <p class="proj-meta">
-                    Independent Research &middot; Oregon Health &amp; Science University
-                    &middot; 2022 &ndash; 2024
-                </p>
-                <p>
-                    A novel intent-based movement prediction system using EEG signals to expand
-                    exoskeleton capabilities for Cerebral Palsy patients beyond basic walking.
-                    Decodes Bereitschaftspotential signals with a custom CNN architecture and feeds
-                    predictions into a ROS-controlled limb simulator via a bidirectional neurofeedback loop.
-                </p>
+        <div class="proj has-thumb">
+            <img class="proj-thumb" src="neuromotus-cap.png" alt="NeuroMotus custom EEG cap">
+            <div class="proj-body">
+                <div class="proj-header">
+                    <h3>NeuroMotus: Brain-Computer Interface for Cerebral Palsy</h3>
+                    <div class="proj-tags">
+                        <a href="neuromotus-paper.pdf" class="tag">paper</a>
+                        <a href="neuromotus-poster.pdf" class="tag">poster</a>
+                        <a href="neuromotus-demo.mp4" class="tag">video</a>
+                    </div>
+                </div>
+                <p class="proj-meta">Independent Research &middot; Oregon Health &amp; Science University &middot; 2022 &ndash; 2024</p>
+                <p>Intent-based movement prediction using EEG signals to expand exoskeleton capabilities for Cerebral Palsy patients beyond basic walking. Decodes Bereitschaftspotential signals with a custom CNN and drives a ROS-controlled limb simulator via a bidirectional neurofeedback loop.</p>
                 <ul>
                     <li>94% accuracy detecting movement intent from raw EEG; 87% accuracy across 6 essential movement types</li>
-                    <li>23.3% faster response time vs. prior systems; 2-channel OpenBCI Cyton board with custom dry electrode cap</li>
-                    <li>Bidirectional neurofeedback loop: EEG input &rarr; CNN &rarr; ROS virtual limb &rarr; visual feedback &rarr; EEG</li>
+                    <li>23.3% faster response time vs. prior systems; OpenBCI Cyton board with custom dry electrode cap</li>
+                    <li>Bidirectional loop: EEG &rarr; CNN &rarr; ROS virtual limb &rarr; visual feedback &rarr; EEG</li>
                     <li><strong>2nd Place Grand Award &amp; CIA Award, ISEF 2023</strong></li>
                 </ul>
-                <p class="proj-links">
-                    <a href="neuromotus-paper.pdf">paper</a> &nbsp;/&nbsp;
-                    <a href="neuromotus-poster.pdf">poster</a> &nbsp;/&nbsp;
-                    <a href="neuromotus-demo.mp4">video</a>
-                </p>
-            </div>
-            <div class="proj-media">
-                <img src="neuromotus-cap.png" alt="NeuroMotus EEG cap system">
-                <p class="caption">Custom EEG cap with OpenBCI Cyton board</p>
-                <video controls>
-                    <source src="neuromotus-demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="caption">Live demo &mdash; NWSE 2023</p>
             </div>
         </div>
 
         <!-- ── ROBOSUITE ───────────────────────────────────── -->
-        <div class="proj">
-            <div class="proj-text">
-                <h3>Robotic Door Manipulation via Deep Reinforcement Learning</h3>
-                <p class="proj-meta">
-                    Course Project &middot; University of Pennsylvania &middot; 2024
-                </p>
-                <p>
-                    DDPG actor-critic reinforcement learning system for robotic door manipulation
-                    in the RoboSuite simulation environment. Achieved near-perfect task success
-                    through reward shaping, exploration noise scheduling, and curriculum training.
-                </p>
+        <div class="proj has-thumb">
+            <img class="proj-thumb" src="robosuite-learning-curve.png" alt="DDPG episodic return learning curve">
+            <div class="proj-body">
+                <div class="proj-header">
+                    <h3>Robotic Door Manipulation via Deep Reinforcement Learning</h3>
+                    <div class="proj-tags">
+                        <a href="robosuite-door.mp4" class="tag">video</a>
+                    </div>
+                </div>
+                <p class="proj-meta">Course Project &middot; University of Pennsylvania &middot; 2024</p>
+                <p>DDPG actor-critic reinforcement learning system for robotic door manipulation in the RoboSuite simulation environment. Achieved near-perfect task success through reward shaping and exploration noise scheduling.</p>
                 <ul>
-                    <li>98% task success rate on door-opening manipulation from a continuous action space</li>
+                    <li>98% task success rate on door-opening from a continuous action space</li>
                     <li>Mean episodic return improved from 90 &rarr; 230 over 7,000 training steps</li>
                     <li>DDPG with target network soft updates; Ornstein-Uhlenbeck exploration noise</li>
                 </ul>
-                <p class="proj-links">
-                    <a href="robosuite-door.mp4">video</a>
-                </p>
-            </div>
-            <div class="proj-media">
-                <video controls>
-                    <source src="robosuite-door.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="caption">Trained DDPG agent opening door</p>
-                <img src="robosuite-learning-curve.png" alt="Episodic return learning curve">
-                <p class="caption">Episodic return over training steps</p>
             </div>
         </div>
 
-        <!-- ── MUSTENG ───────────────────────────────────────── -->
+        <!-- ── MUSTENG ────────────────────────────────────── -->
         <div class="proj">
-            <div class="proj-text">
-                <h3>
-                    <a href="musteng.pdf">
-                        MusTENG: Wearable Triboelectric Nanogenerator for Cerebral Palsy Rehabilitation
-                    </a>
-                </h3>
-                <p class="proj-meta">
-                    Independent Research &middot; Published in <em>Journal of Research: High School</em>, Vol. 2022(2), pp. 168&ndash;180
-                    &middot; 2022
-                </p>
-                <p>
-                    A wearable triboelectric nanogenerator (TENG) sensor and ML pipeline for
-                    quantifying muscle spasticity in children with Cerebral Palsy. The MusTENG sensor
-                    converts microscopic muscle deformation into electrical signals; a 1D convolutional
-                    autoencoder detects anomalies from baseline and computes a custom
-                    Calculated Muscle Spasticity Score (cMSS) for three major leg muscle groups.
-                </p>
+            <div class="proj-body">
+                <div class="proj-header">
+                    <h3>MusTENG: Wearable Triboelectric Nanogenerator for Cerebral Palsy Rehabilitation</h3>
+                    <div class="proj-tags">
+                        <a href="musteng.pdf" class="tag">paper</a>
+                        <a href="https://www.journalresearchhs.org/_files/ugd/ebf144_a0204f17d55248a5afffb8aaeede04f9.pdf" class="tag">journal</a>
+                    </div>
+                </div>
+                <p class="proj-meta">Independent Research &middot; Published in <em>Journal of Research: High School</em>, Vol.&thinsp;2022(2) pp.&thinsp;168&ndash;180 &middot; 2022</p>
+                <p>Wearable triboelectric nanogenerator sensor and ML pipeline for quantifying muscle spasticity in children with Cerebral Palsy. Converts microscopic muscle deformation into electrical signals; a 1D convolutional autoencoder computes a Calculated Muscle Spasticity Score (cMSS) across three leg muscle groups.</p>
                 <ul>
-                    <li>Custom woven sensor (65% polyester / 100% nylon + silver conductor) fabricated and calibrated for sensitivity across 0&ndash;20 Hz muscle contractions</li>
-                    <li>1D convolutional autoencoder (7 layers, 9,500+ parameters) with AUC-based anomaly scoring for spasticity quantification</li>
-                    <li>91% accuracy on thigh, 84% on hamstring, 89% on calf across 170 total trials; validated across three CP gait patterns</li>
-                    <li>Closed-loop physical therapy game using live cMSS feedback for guided personalized rehabilitation</li>
+                    <li>Custom woven sensor (65% polyester / 100% nylon + silver conductor) fabricated and calibrated from scratch</li>
+                    <li>1D convolutional autoencoder (7 layers, 9,500+ parameters) with AUC-based anomaly scoring</li>
+                    <li>91% accuracy on thigh &middot; 84% hamstring &middot; 89% calf across 170 trials; three CP gait patterns validated</li>
+                    <li>Closed-loop physical therapy game using live cMSS sensor feedback</li>
                     <li><strong>Peer-reviewed publication, Journal of Research: High School (2022)</strong></li>
                 </ul>
-                <p class="proj-links">
-                    <a href="musteng.pdf">paper</a> &nbsp;/&nbsp;
-                    <a href="https://www.journalresearchhs.org/_files/ugd/ebf144_a0204f17d55248a5afffb8aaeede04f9.pdf">journal</a>
-                </p>
             </div>
-            <div class="proj-media">
-                <img src="contraction.gif" alt="Muscle contraction sensor reading">
-                <p class="caption">MusTENG sensor responding to muscle contraction</p>
-            </div>
-        </div>
-
-        <!-- ── HYDROPLANING ────────────────────────────────── -->
-        <div class="proj">
-            <div class="proj-text">
-                <h3>Hydroplaning Prevention via Autoencoder Tactile Sensing</h3>
-                <p class="proj-meta">
-                    Independent Research &middot; 2020 &ndash; 2021
-                </p>
-                <p>
-                    Collision-prevention method using autoencoder networks paired with tactile
-                    vibration sensors to detect and predict hydroplaning onset before loss of
-                    vehicle control.
-                </p>
-                <ul>
-                    <li>87% prediction accuracy for hydroplaning onset</li>
-                    <li><strong>2nd Place Grand Award, ISEF 2021</strong></li>
-                </ul>
-            </div>
-            <div class="proj-media"></div>
-        </div>
-
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-org">LDOS Lab &middot; University of Pennsylvania</span>
-                <span class="exp-date">Jan 2025 &ndash; Sep 2025</span>
-            </div>
-            <p class="exp-role">OS / AI Researcher</p>
-            <p>
-                Profiled allocative slow-path bottlenecks across page compaction routines using
-                kprobes and custom benchmarking across 127K+ lines of Linux kernel code.
-                Designed recursive data management algorithm improving memory throughput by ~18%.
-            </p>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-org">MediVoice AI</span>
-                <span class="exp-date">Jan 2025 &ndash; Sep 2025</span>
-            </div>
-            <p class="exp-role">Software Engineering Intern</p>
-            <p>
-                Built scalable web scraping pipeline generating 100K+ medical QA pairs.
-                Integrated real-time ASR pipelines using Whisper + VOSK for patient-doctor speech transcription.
-            </p>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-org">Oregon Health &amp; Science University</span>
-                <span class="exp-date">Apr 2023 &ndash; Aug 2024</span>
-            </div>
-            <p class="exp-role">Robotics Systems Engineer Intern</p>
-            <p>
-                Built CNN for decoding Bereitschaftspotential EEG signals achieving 23.3% faster
-                response time for virtual hand simulations. Engineered bidirectional neurofeedback
-                loop between EEG input and ROS-controlled limb simulator.
-            </p>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-org">Biomotum Inc</span>
-                <span class="exp-date">Dec 2021 &ndash; Jun 2023</span>
-            </div>
-            <p class="exp-role">Software &amp; Mechanical Engineering Intern</p>
-            <p>
-                Developed Python-based calibration algorithms for exoskeletal prosthetics using SVD
-                and PCA. Proposed CAD modifications to Spark prosthetic system improving energy
-                efficiency and wearability.
-            </p>
         </div>
 
     </section>
