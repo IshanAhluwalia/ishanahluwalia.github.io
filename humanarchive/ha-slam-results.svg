@@ -1,0 +1,47 @@
+<svg viewBox="0 0 960 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scatter plot of gap-adjusted ATE against completeness for six SLAM systems"><rect width="960" height="430" fill="#fff"/><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;fill:#888}
+.axis{font-size:11px}.val{font-size:11.5px;font-weight:500;fill:#222}.val-mute{font-size:11.5px;fill:#777}
+.lgnd{font-size:12px;fill:#555}.grid{stroke:#eee;stroke-width:1}.axisline{stroke:#ccc;stroke-width:1}
+</style>
+    <rect x="700" y="50" width="220" height="69" fill="#E8F5EC"/>
+    <text class="axis" x="920" y="40" text-anchor="end" style="fill:#2E9E63">low error, high coverage</text>
+
+    <line class="grid" x1="100" y1="50" x2="920" y2="50"/><text class="axis" x="90" y="54" text-anchor="end">0.5</text>
+    <line class="grid" x1="100" y1="84.7" x2="920" y2="84.7"/><text class="axis" x="90" y="88" text-anchor="end">1</text>
+    <line class="grid" x1="100" y1="119.4" x2="920" y2="119.4"/><text class="axis" x="90" y="123" text-anchor="end">2</text>
+    <line class="grid" x1="100" y1="165.3" x2="920" y2="165.3"/><text class="axis" x="90" y="169" text-anchor="end">5</text>
+    <line class="grid" x1="100" y1="200" x2="920" y2="200"/><text class="axis" x="90" y="204" text-anchor="end">10</text>
+    <line class="grid" x1="100" y1="234.7" x2="920" y2="234.7"/><text class="axis" x="90" y="238" text-anchor="end">20</text>
+    <line class="grid" x1="100" y1="280.6" x2="920" y2="280.6"/><text class="axis" x="90" y="284" text-anchor="end">50</text>
+    <line class="grid" x1="100" y1="315.3" x2="920" y2="315.3"/><text class="axis" x="90" y="319" text-anchor="end">100</text>
+    <line class="axisline" x1="100" y1="350" x2="920" y2="350"/><text class="axis" x="90" y="354" text-anchor="end">200</text>
+    <line class="axisline" x1="100" y1="50" x2="100" y2="350"/>
+
+    <text class="axis" x="100" y="372" text-anchor="middle">60%</text>
+    <text class="axis" x="295" y="372" text-anchor="middle">70%</text>
+    <text class="axis" x="490" y="372" text-anchor="middle">80%</text>
+    <text class="axis" x="685" y="372" text-anchor="middle">90%</text>
+    <text class="axis" x="880" y="372" text-anchor="middle">100%</text>
+    <text class="lgnd" x="510" y="400" text-anchor="middle">Completeness →</text>
+    <text class="lgnd" x="30" y="200" text-anchor="middle" transform="rotate(-90 30 200)">← Gap-adjusted ATE (cm, log)</text>
+
+    <circle cx="876.1" cy="65.8" r="9" fill="#2E9E63"/>
+    <text class="val" x="858" y="70" text-anchor="end" style="fill:#1C6B43;font-weight:600">HA-SLAM</text>
+
+    <circle cx="876.1" cy="184.6" r="7" fill="#9DA3AB"/>
+    <text class="val-mute" x="858" y="189" text-anchor="end">Basalt</text>
+
+    <circle cx="451" cy="219" r="7" fill="#9DA3AB"/>
+    <text class="val-mute" x="465" y="223">OKVIS2</text>
+
+    <circle cx="203.3" cy="240.1" r="7" fill="#6E747C"/>
+    <text class="val-mute" x="217" y="244">ORB-SLAM3</text>
+
+    <line x1="848" y1="287" x2="869" y2="295" stroke="#C9CDD2" stroke-width="1"/>
+    <circle cx="876.1" cy="298.9" r="6" fill="#C9CDD2"/>
+    <text class="val-mute" x="842" y="290" text-anchor="end">DPVO</text>
+
+    <line x1="848" y1="327" x2="870" y2="312" stroke="#ADB2B8" stroke-width="1"/>
+    <circle cx="876.1" cy="307.5" r="6" fill="#ADB2B8"/>
+    <text class="val-mute" x="842" y="330" text-anchor="end">DROID-SLAM</text>
+  </svg>

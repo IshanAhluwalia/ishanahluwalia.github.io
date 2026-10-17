@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishan Ahluwalia</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 <div class="wrapper">
 
     <header>
         <h1>Ishan Ahluwalia</h1>
-        <p class="tagline">AI &amp; Applied Mathematics &middot; University of Pennsylvania</p>
+        <p class="tagline">Founding Researcher, Human Archive &middot; AI &amp; Applied Mathematics, University of Pennsylvania</p>
         <p class="bio">
             I build intelligent systems at the intersection of robotics and artificial intelligence.
-            My work spans optical tactile sensing for underwater soft robots, reinforcement learning
-            for aquatic locomotion, and brain-computer interfaces for assistive exoskeletons.
-            I am a researcher at the <a href="https://grasp.upenn.edu/">GRASP Lab</a> at Penn,
-            advised by <a href="https://sung.seas.upenn.edu/">Prof. Cynthia Sung</a>.
+            I am a founding researcher at <a href="https://www.humanarchive.ai/">Human Archive</a>, where I lead
+            egocentric perception research: stereo-inertial SLAM, 3D hand tracking, and human-video pretraining
+            for dexterous robot manipulation. Previously I was a researcher at the
+            <a href="https://grasp.upenn.edu/">GRASP Lab</a> at Penn, advised by
+            <a href="https://sung.seas.upenn.edu/">Prof. Cynthia Sung</a>, working on optical tactile sensing
+            and reinforcement learning for underwater soft robots.
         </p>
         <p class="contact-links">
             <a href="mailto:ishanah@seas.upenn.edu">Email</a> &nbsp;/&nbsp;
@@ -25,6 +27,88 @@
             <a href="https://github.com/IshanAhluwalia">GitHub</a>
         </p>
     </header>
+
+    <section class="org">
+        <h2>Human Archive</h2>
+        <p class="org-meta">
+            <strong>Founding Researcher</strong> &middot; San Francisco &middot; May 2026 &ndash; Present
+            &middot; $8M raised, backed by Wing &amp; Y Combinator
+        </p>
+
+        <!-- ── HA-SLAM ─────────────────────────────────────── -->
+        <div class="proj feature">
+            <div class="proj-body">
+                <div class="proj-header">
+                    <h3>HA-SLAM: Stereo-Inertial SLAM for Egocentric Motion</h3>
+                    <div class="proj-tags">
+                        <a href="https://ha-slam.humanarchive.ai/" class="tag">project page</a>
+                    </div>
+                </div>
+                <p class="proj-meta">Project Lead &middot; Human Archive &middot; 2026</p>
+                <figure class="media">
+                    <video controls autoplay muted loop playsinline preload="metadata" poster="humanarchive/ha-slam-poster.jpg">
+                        <source src="humanarchive/ha-slam-demo.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>HA-SLAM tracking head motion live (left: egocentric view; right: estimated vs. mocap ground-truth trajectory).</figcaption>
+                </figure>
+                <ul>
+                    <li>Stereo-inertial SLAM system for egocentric head motion: <strong>0.54&thinsp;cm ATE</strong> and <strong>99.0% completeness</strong> on 8 mocap ground-truth sequences, <strong>10.7&times; lower error</strong> than ORB-SLAM3, OKVIS2, Basalt, DPVO and DROID-SLAM</li>
+                    <li>Replaced handcrafted features with a learned SuperPoint + LightGlue frontend (8&times; more matches, 17&times; under fast rotation and motion blur)</li>
+                    <li>Self-calibration that corrects scale and IMU timing drift without calibration targets</li>
+                </ul>
+                <figure class="media chart">
+                    <img src="humanarchive/ha-slam-results.svg" alt="Gap-adjusted ATE against completeness for HA-SLAM and five baseline SLAM systems">
+                    <figcaption>Gap-adjusted ATE vs. completeness (log error axis). Upper right is better: accurate and continuous.</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- ── HA-HAND ─────────────────────────────────────── -->
+        <div class="proj feature">
+            <div class="proj-body">
+                <div class="proj-header">
+                    <h3>HA-Hand: Stereo Egocentric 3D Hand Tracking</h3>
+                </div>
+                <p class="proj-meta">Project Lead &middot; Human Archive &middot; 2026</p>
+                <ul>
+                    <li>3D egocentric hand-tracking system built on a custom ViT-H stereo transformer: <strong>6.5&thinsp;mm PA-MPJPE</strong> and <strong>10.8&thinsp;mm wrist error</strong> against held-out OptiTrack motion-capture ground truth</li>
+                    <li>Built a large-scale motion-capture ground-truth pipeline: a 32-camera synchronized IR-marker OptiTrack system time-aligned to our egocentric rig</li>
+                    <li>Trained on 1.1M frames from 150+ participants across 50+ environments</li>
+                    <li>Scaled inference to a fleet of 8 NVIDIA H100 nodes on RunPod, producing 3D hand and camera-pose labels for <strong>10,000+ hours</strong> of egocentric video &mdash; the data behind Human Archive&rsquo;s datasets for leading AI labs</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ── HARD-2 ──────────────────────────────────────── -->
+        <div class="proj feature">
+            <div class="proj-body">
+                <div class="proj-header">
+                    <h3>HARD-2: Human Video Pretraining for Dexterous Manipulation</h3>
+                    <div class="proj-tags">
+                        <a href="https://www.humanarchive.ai/hard2.html" class="tag">project page</a>
+                    </div>
+                </div>
+                <p class="proj-meta">Co-Lead &middot; Human Archive &middot; 2026</p>
+                <figure class="media">
+                    <video controls autoplay muted loop playsinline preload="metadata" poster="humanarchive/hard2-poster.jpg">
+                        <source src="humanarchive/hard2-comparison.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>The same VLA trained on different human-video datasets, run on the same task.</figcaption>
+                </figure>
+                <ul>
+                    <li>Large-scale egocentric evaluation: pretrained the VITRA VLA (PaliGemma-2 3B + DiT action head) on 100&thinsp;h of egocentric video, compared against two EgoVerse datasets and a model with no human-video pretraining</li>
+                    <li>On a Franka FR3 arm with a 20-DoF Wuji hand (200 trials): <strong>48% task success</strong> vs. 38&ndash;40% for the other datasets and 18% with no human-video pretraining</li>
+                    <li>On unseen objects: <strong>40%</strong> vs. 24&ndash;28%</li>
+                </ul>
+                <div class="clip-grid">
+                    <figure><video autoplay muted loop playsinline preload="metadata" src="humanarchive/hard2-close-lid.mp4"></video><figcaption>Close the lid</figcaption></figure>
+                    <figure><video autoplay muted loop playsinline preload="metadata" src="humanarchive/hard2-throw-bottle.mp4"></video><figcaption>Throw out the bottle</figcaption></figure>
+                    <figure><video autoplay muted loop playsinline preload="metadata" src="humanarchive/hard2-dunk-ball.mp4"></video><figcaption>Dunk the ball</figcaption></figure>
+                    <figure><video autoplay muted loop playsinline preload="metadata" src="humanarchive/hard2-twist-cube.mp4"></video><figcaption>Twist the Rubik&rsquo;s cube</figcaption></figure>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section>
         <h2>Research &amp; Projects</h2>
@@ -138,7 +222,7 @@
     </section>
 
     <footer>
-        <p>Ishan Ahluwalia &nbsp;&middot;&nbsp; <a href="mailto:ishanah@seas.upenn.edu">ishanah@seas.upenn.edu</a> &nbsp;&middot;&nbsp; Updated June 2026</p>
+        <p>Ishan Ahluwalia &nbsp;&middot;&nbsp; <a href="mailto:ishanah@seas.upenn.edu">ishanah@seas.upenn.edu</a> &nbsp;&middot;&nbsp; Updated October 2026</p>
     </footer>
 
 </div>
