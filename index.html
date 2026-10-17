@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishan Ahluwalia</title>
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 <div class="wrapper">
@@ -32,17 +32,14 @@
         <h2>Research &amp; Projects</h2>
 
         <!-- ── HA-SLAM ─────────────────────────────────────── -->
-        <div class="proj has-thumb">
-            <video class="proj-thumb" src="humanarchive/ha-slam-thumb.mp4" muted autoplay loop playsinline aria-label="HA-SLAM tracking egocentric head motion against mocap ground truth"></video>
+        <article class="proj">
+            <div class="proj-media">
+                <video src="humanarchive/ha-slam-thumb.mp4" poster="humanarchive/ha-slam-thumb-poster.jpg" muted autoplay loop playsinline aria-label="HA-SLAM tracking egocentric head motion"></video>
+            </div>
             <div class="proj-body">
-                <div class="proj-header">
-                    <h3>HA-SLAM: Stereo-Inertial SLAM for Egocentric Motion</h3>
-                </div>
+                <h3>HA-SLAM: Stereo-Inertial SLAM for Egocentric Motion</h3>
                 <p class="proj-meta">Founding Researcher &middot; Human Archive &middot; 2026</p>
-                <div class="proj-tags">
-                    <a href="https://ha-slam.humanarchive.ai/" class="tag">project page</a>
-                    <a href="humanarchive/ha-slam-demo.mp4" class="tag">video</a>
-                </div>
+                <p class="proj-links"><a href="https://ha-slam.humanarchive.ai/">project page</a> / <a href="humanarchive/ha-slam-demo.mp4">video</a></p>
                 <p>Stereo-inertial SLAM for egocentric head motion, built for labelling large-scale human video. Accurate to half a centimetre and tracks nearly every frame, where established systems lose track or drift.</p>
                 <ul>
                     <li>0.54&thinsp;cm ATE and 99.0% completeness on 8 mocap ground-truth sequences &mdash; 10.7&times; lower error than ORB-SLAM3, OKVIS2, Basalt, DPVO, DROID-SLAM</li>
@@ -50,15 +47,17 @@
                     <li>Target-free self-calibration that corrects scale and IMU timing drift</li>
                 </ul>
             </div>
-        </div>
+        </article>
 
         <!-- ── HA-HAND ─────────────────────────────────────── -->
-        <div class="proj">
+        <article class="proj">
+            <div class="proj-media">
+                <video src="humanarchive/ha-hand-thumb.mp4" poster="humanarchive/ha-hand-thumb-poster.jpg" muted autoplay loop playsinline aria-label="HA-Hand mesh overlaid on a tracked hand"></video>
+            </div>
             <div class="proj-body">
-                <div class="proj-header">
-                    <h3>HA-Hand: Stereo Egocentric 3D Hand Tracking</h3>
-                </div>
+                <h3>HA-Hand: Stereo Egocentric 3D Hand Tracking</h3>
                 <p class="proj-meta">Founding Researcher &middot; Human Archive &middot; 2026</p>
+                <p class="proj-links">&nbsp;</p>
                 <p>3D egocentric hand tracking built on a custom ViT-H stereo transformer, validated against motion capture and run at fleet scale to label Human Archive&rsquo;s datasets for leading AI labs.</p>
                 <ul>
                     <li>6.5&thinsp;mm PA-MPJPE and 10.8&thinsp;mm wrist error against held-out OptiTrack motion-capture ground truth</li>
@@ -67,20 +66,17 @@
                     <li>Inference scaled to 8 NVIDIA H100 nodes on RunPod: 3D hand and camera-pose labels for 10,000+ hours of egocentric video</li>
                 </ul>
             </div>
-        </div>
+        </article>
 
         <!-- ── HARD-2 ──────────────────────────────────────── -->
-        <div class="proj has-thumb">
-            <video class="proj-thumb" src="humanarchive/hard2-thumb.mp4" muted autoplay loop playsinline aria-label="Franka arm with Wuji dexterous hand dunking a ball"></video>
+        <article class="proj">
+            <div class="proj-media">
+                <video src="humanarchive/hard2-thumb.mp4" poster="humanarchive/hard2-thumb-poster.jpg" muted autoplay loop playsinline aria-label="Franka arm with Wuji dexterous hand dunking a ball"></video>
+            </div>
             <div class="proj-body">
-                <div class="proj-header">
-                    <h3>HARD-2: Human Video Pretraining for Dexterous Manipulation</h3>
-                </div>
+                <h3>HARD-2: Human Video Pretraining for Dexterous Manipulation</h3>
                 <p class="proj-meta">Co-Lead &middot; Human Archive &middot; 2026</p>
-                <div class="proj-tags">
-                    <a href="https://www.humanarchive.ai/hard2.html" class="tag">project page</a>
-                    <a href="humanarchive/hard2-comparison.mp4" class="tag">video</a>
-                </div>
+                <p class="proj-links"><a href="https://www.humanarchive.ai/hard2.html">project page</a> / <a href="humanarchive/hard2-comparison.mp4">video</a></p>
                 <p>Does egocentric human video make robots more dexterous? We pretrained the VITRA VLA (PaliGemma-2 3B + DiT action head) on 100&thinsp;h of our egocentric video and compared it against two EgoVerse datasets and a model with no human-video pretraining.</p>
                 <ul>
                     <li>Franka FR3 arm with a 20-DoF Wuji hand, 200 real-robot trials</li>
@@ -88,19 +84,17 @@
                     <li>40% vs. 24&ndash;28% on unseen objects</li>
                 </ul>
             </div>
-        </div>
+        </article>
 
         <!-- ── OPTICAL TACTILE SENSING ─────────────────────── -->
-        <div class="proj">
+        <article class="proj">
+            <div class="proj-media">
+                <img src="tactile-thumb.jpg" alt="Fisheye view of the fractal maze pattern on the elastomer skin">
+            </div>
             <div class="proj-body">
-                <div class="proj-header">
-                    <h3>Optical Tactile Sensing for Underwater Robotics</h3>
-                </div>
+                <h3>Optical Tactile Sensing for Underwater Robotics</h3>
                 <p class="proj-meta">Researcher &middot; GRASP Lab, University of Pennsylvania &middot; with Annie Yang &amp; Prof. Cynthia Sung &middot; 2025</p>
-                <div class="proj-tags">
-                    <a href="tactile_sensing.pdf" class="tag">paper</a>
-                    <a href="https://github.com/IshanAhluwalia/Optical-Tactile-Sensing-Research" class="tag">github</a>
-                </div>
+                <p class="proj-links"><a href="tactile_sensing.pdf">paper</a> / <a href="https://github.com/IshanAhluwalia/Optical-Tactile-Sensing-Research">github</a></p>
                 <p>Teaching a soft underwater robot to feel using only a camera. We print a dense fractal maze pattern on a transparent elastomer skin (225&thinsp;&times;&thinsp;30&thinsp;mm), mount a fisheye camera inside, and train a spatiotemporal encoder-decoder to infer contact location, indentation depth, normal force, and surface wave propagation at 30&thinsp;fps &mdash; no force sensors at inference.</p>
                 <ul>
                     <li>Custom data rig collected ~360,000 labeled frames across 1,076 grid locations on a 2&thinsp;mm&thinsp;&times;&thinsp;2&thinsp;mm grid</li>
@@ -109,19 +103,17 @@
                     <li>Baseline MAE: 0.52&thinsp;mm contact location &middot; 0.38&thinsp;mm depth &middot; 55&thinsp;mN force &mdash; generalizes to unseen contact positions</li>
                 </ul>
             </div>
-        </div>
+        </article>
 
         <!-- ── SLAP ROBOT ──────────────────────────────────── -->
-        <div class="proj has-thumb">
-            <img class="proj-thumb" src="intro_soft4.gif" alt="SLAP soft aquatic robot locomotion">
+        <article class="proj">
+            <div class="proj-media">
+                <img src="intro_soft4.gif" alt="SLAP soft aquatic robot locomotion">
+            </div>
             <div class="proj-body">
-                <div class="proj-header">
-                    <h3>Reinforcement Learning Control for Aquatic Soft Robots</h3>
-                </div>
+                <h3>Reinforcement Learning Control for Aquatic Soft Robots</h3>
                 <p class="proj-meta">Researcher &middot; GRASP Lab / Sung Lab, University of Pennsylvania &middot; Aug 2025 &ndash; Present</p>
-                <div class="proj-tags">
-                    <a href="slap_robot_demo.mp4" class="tag">video</a>
-                </div>
+                <p class="proj-links"><a href="slap_robot_demo.mp4">video</a></p>
                 <p>Developing RL control policies for the SLAP robot &mdash; a biologically-inspired soft limbless aquatic propulsor. MDP reward shaping for forward locomotion and turning, alongside DenseTact Mini&thinsp;2 optical tactile sensor integration for environmental feedback and CNN-based underwater localization.</p>
                 <ul>
                     <li>Designed MDP reward states for locomotion; tested on 2D RL simulation environment</li>
@@ -129,21 +121,17 @@
                     <li>CNN pipeline for underwater location mapping from tactile sensor streams</li>
                 </ul>
             </div>
-        </div>
+        </article>
 
         <!-- ── NEUROMOTUS ──────────────────────────────────── -->
-        <div class="proj has-thumb">
-            <img class="proj-thumb" src="neuromotus-cap.png" alt="NeuroMotus custom EEG cap">
+        <article class="proj">
+            <div class="proj-media">
+                <img src="neuromotus-cap.png" alt="NeuroMotus custom EEG cap">
+            </div>
             <div class="proj-body">
-                <div class="proj-header">
-                    <h3>NeuroMotus: Brain-Computer Interface for Cerebral Palsy</h3>
-                </div>
+                <h3>NeuroMotus: Brain-Computer Interface for Cerebral Palsy</h3>
                 <p class="proj-meta">Independent Research &middot; Oregon Health &amp; Science University &middot; 2022 &ndash; 2024</p>
-                <div class="proj-tags">
-                    <a href="neuromotus-paper.pdf" class="tag">paper</a>
-                    <a href="neuromotus-poster.pdf" class="tag">poster</a>
-                    <a href="neuromotus-demo.mp4" class="tag">video</a>
-                </div>
+                <p class="proj-links"><a href="neuromotus-paper.pdf">paper</a> / <a href="neuromotus-poster.pdf">poster</a> / <a href="neuromotus-demo.mp4">video</a></p>
                 <p>Intent-based movement prediction using EEG signals to expand exoskeleton capabilities for Cerebral Palsy patients beyond basic walking. Decodes Bereitschaftspotential signals with a custom CNN and drives a ROS-controlled limb simulator via a bidirectional neurofeedback loop.</p>
                 <ul>
                     <li>94% accuracy detecting movement intent from raw EEG; 87% accuracy across 6 essential movement types</li>
@@ -152,19 +140,17 @@
                     <li><strong>2nd Place Grand Award &amp; CIA Award, ISEF 2023</strong></li>
                 </ul>
             </div>
-        </div>
+        </article>
 
         <!-- ── ROBOSUITE ───────────────────────────────────── -->
-        <div class="proj has-thumb">
-            <img class="proj-thumb" src="robosuite-learning-curve.png" alt="DDPG episodic return learning curve">
+        <article class="proj">
+            <div class="proj-media">
+                <img src="robosuite-learning-curve.png" alt="DDPG episodic return learning curve">
+            </div>
             <div class="proj-body">
-                <div class="proj-header">
-                    <h3>Robotic Door Manipulation via Deep Reinforcement Learning</h3>
-                </div>
+                <h3>Robotic Door Manipulation via Deep Reinforcement Learning</h3>
                 <p class="proj-meta">Course Project &middot; University of Pennsylvania &middot; 2024</p>
-                <div class="proj-tags">
-                    <a href="robosuite-door.mp4" class="tag">video</a>
-                </div>
+                <p class="proj-links"><a href="robosuite-door.mp4">video</a></p>
                 <p>DDPG actor-critic reinforcement learning system for robotic door manipulation in the RoboSuite simulation environment. Achieved near-perfect task success through reward shaping and exploration noise scheduling.</p>
                 <ul>
                     <li>98% task success rate on door-opening from a continuous action space</li>
@@ -172,19 +158,17 @@
                     <li>DDPG with target network soft updates; Ornstein-Uhlenbeck exploration noise</li>
                 </ul>
             </div>
-        </div>
+        </article>
 
         <!-- ── MUSTENG ────────────────────────────────────── -->
-        <div class="proj">
+        <article class="proj">
+            <div class="proj-media">
+                <img src="musteng-thumb.jpg" alt="The woven MusTENG triboelectric sensor">
+            </div>
             <div class="proj-body">
-                <div class="proj-header">
-                    <h3>MusTENG: Wearable Triboelectric Nanogenerator for Cerebral Palsy Rehabilitation</h3>
-                </div>
-                <p class="proj-meta">Independent Research &middot; Published in <em>Journal of Research: High School</em>, Vol.&thinsp;2022(2) pp.&thinsp;168&ndash;180 &middot; 2022</p>
-                <div class="proj-tags">
-                    <a href="musteng.pdf" class="tag">paper</a>
-                    <a href="https://www.journalresearchhs.org/_files/ugd/ebf144_a0204f17d55248a5afffb8aaeede04f9.pdf" class="tag">journal</a>
-                </div>
+                <h3>MusTENG: Wearable Triboelectric Nanogenerator for Cerebral Palsy Rehabilitation</h3>
+                <p class="proj-meta">Independent Research &middot; <em>Journal of Research: High School</em>, Vol.&thinsp;2022(2) pp.&thinsp;168&ndash;180 &middot; 2022</p>
+                <p class="proj-links"><a href="musteng.pdf">paper</a> / <a href="https://www.journalresearchhs.org/_files/ugd/ebf144_a0204f17d55248a5afffb8aaeede04f9.pdf">journal</a></p>
                 <p>Wearable triboelectric nanogenerator sensor and ML pipeline for quantifying muscle spasticity in children with Cerebral Palsy. Converts microscopic muscle deformation into electrical signals; a 1D convolutional autoencoder computes a Calculated Muscle Spasticity Score (cMSS) across three leg muscle groups.</p>
                 <ul>
                     <li>Custom woven sensor (65% polyester / 100% nylon + silver conductor) fabricated and calibrated from scratch</li>
@@ -194,7 +178,7 @@
                     <li><strong>Peer-reviewed publication, Journal of Research: High School (2022)</strong></li>
                 </ul>
             </div>
-        </div>
+        </article>
 
     </section>
 
